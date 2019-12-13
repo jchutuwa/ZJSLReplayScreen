@@ -14,10 +14,15 @@
 		6BA697C923A33B650063E22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA697C823A33B650063E22D /* Assets.xcassets */; };
 		6BA697CC23A33B650063E22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA697CA23A33B650063E22D /* LaunchScreen.storyboard */; };
 		6BA697CF23A33B650063E22D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA697CE23A33B650063E22D /* main.m */; };
+		6BA697E023A37AF60063E22D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA697D823A37AF60063E22D /* MBProgressHUD.m */; };
+		6BA697E123A37AF60063E22D /* MBProgressHUD+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA697DA23A37AF60063E22D /* MBProgressHUD+Message.m */; };
+		6BA697E323A37AF60063E22D /* TopReplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA697DE23A37AF60063E22D /* TopReplayManager.m */; };
+		6BA697E623A37C630063E22D /* RPPreviewViewController+MovieURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA697E423A37C630063E22D /* RPPreviewViewController+MovieURL.m */; };
+		6BA697E923A37E8E0063E22D /* 1582.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 6BA697E823A37E8E0063E22D /* 1582.MP4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6BA697B923A33B620063E22D /* ZJSLReplayScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJSLReplayScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA697B923A33B620063E22D /* 录屏.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "录屏.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA697BC23A33B620063E22D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6BA697BD23A33B620063E22D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BA697BF23A33B620063E22D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +34,15 @@
 		6BA697CB23A33B650063E22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA697CD23A33B650063E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BA697CE23A33B650063E22D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BA697D723A37AF60063E22D /* MBProgressHUD+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Message.h"; sourceTree = "<group>"; };
+		6BA697D823A37AF60063E22D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6BA697D923A37AF60063E22D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6BA697DA23A37AF60063E22D /* MBProgressHUD+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Message.m"; sourceTree = "<group>"; };
+		6BA697DC23A37AF60063E22D /* TopReplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopReplayManager.h; sourceTree = "<group>"; };
+		6BA697DE23A37AF60063E22D /* TopReplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopReplayManager.m; sourceTree = "<group>"; };
+		6BA697E423A37C630063E22D /* RPPreviewViewController+MovieURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RPPreviewViewController+MovieURL.m"; sourceTree = "<group>"; };
+		6BA697E523A37C630063E22D /* RPPreviewViewController+MovieURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RPPreviewViewController+MovieURL.h"; sourceTree = "<group>"; };
+		6BA697E823A37E8E0063E22D /* 1582.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1582.MP4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,7 @@
 		6BA697BA23A33B620063E22D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BA697B923A33B620063E22D /* ZJSLReplayScreen.app */,
+				6BA697B923A33B620063E22D /* 录屏.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +75,7 @@
 		6BA697BB23A33B620063E22D /* ZJSLReplayScreen */ = {
 			isa = PBXGroup;
 			children = (
+				6BA697D523A37AF60063E22D /* Tool */,
 				6BA697BC23A33B620063E22D /* AppDelegate.h */,
 				6BA697BD23A33B620063E22D /* AppDelegate.m */,
 				6BA697BF23A33B620063E22D /* SceneDelegate.h */,
@@ -72,8 +87,48 @@
 				6BA697CA23A33B650063E22D /* LaunchScreen.storyboard */,
 				6BA697CD23A33B650063E22D /* Info.plist */,
 				6BA697CE23A33B650063E22D /* main.m */,
+				6BA697E723A37E8E0063E22D /* Resources */,
 			);
 			path = ZJSLReplayScreen;
+			sourceTree = "<group>";
+		};
+		6BA697D523A37AF60063E22D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				6BA697D623A37AF60063E22D /* MBProgressHUD */,
+				6BA697DB23A37AF60063E22D /* Replay */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		6BA697D623A37AF60063E22D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6BA697D723A37AF60063E22D /* MBProgressHUD+Message.h */,
+				6BA697D823A37AF60063E22D /* MBProgressHUD.m */,
+				6BA697D923A37AF60063E22D /* MBProgressHUD.h */,
+				6BA697DA23A37AF60063E22D /* MBProgressHUD+Message.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		6BA697DB23A37AF60063E22D /* Replay */ = {
+			isa = PBXGroup;
+			children = (
+				6BA697E523A37C630063E22D /* RPPreviewViewController+MovieURL.h */,
+				6BA697E423A37C630063E22D /* RPPreviewViewController+MovieURL.m */,
+				6BA697DE23A37AF60063E22D /* TopReplayManager.m */,
+				6BA697DC23A37AF60063E22D /* TopReplayManager.h */,
+			);
+			path = Replay;
+			sourceTree = "<group>";
+		};
+		6BA697E723A37E8E0063E22D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6BA697E823A37E8E0063E22D /* 1582.MP4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +148,7 @@
 			);
 			name = ZJSLReplayScreen;
 			productName = ZJSLReplayScreen;
-			productReference = 6BA697B923A33B620063E22D /* ZJSLReplayScreen.app */;
+			productReference = 6BA697B923A33B620063E22D /* 录屏.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,6 +191,7 @@
 				6BA697CC23A33B650063E22D /* LaunchScreen.storyboard in Resources */,
 				6BA697C923A33B650063E22D /* Assets.xcassets in Resources */,
 				6BA697C723A33B620063E22D /* Main.storyboard in Resources */,
+				6BA697E923A37E8E0063E22D /* 1582.MP4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,10 +202,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA697E623A37C630063E22D /* RPPreviewViewController+MovieURL.m in Sources */,
+				6BA697E323A37AF60063E22D /* TopReplayManager.m in Sources */,
 				6BA697C423A33B620063E22D /* ViewController.m in Sources */,
 				6BA697BE23A33B620063E22D /* AppDelegate.m in Sources */,
+				6BA697E023A37AF60063E22D /* MBProgressHUD.m in Sources */,
 				6BA697CF23A33B650063E22D /* main.m in Sources */,
 				6BA697C123A33B620063E22D /* SceneDelegate.m in Sources */,
+				6BA697E123A37AF60063E22D /* MBProgressHUD+Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,13 +352,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38GQZDVHAS;
 				INFOPLIST_FILE = ZJSLReplayScreen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daan.www.ZJSLReplayScreen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "录屏";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,13 +370,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38GQZDVHAS;
 				INFOPLIST_FILE = ZJSLReplayScreen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daan.www.ZJSLReplayScreen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "录屏";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
