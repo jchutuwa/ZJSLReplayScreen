@@ -83,21 +83,22 @@
 - (void)photo_Available {
     
 #warning 此处系统f判断有误...
-//    BOOL photo_able = [YX_ReplayManager detectionPhotoState:^{
-//        [self REC_Available];
-//    }];
-//    if (photo_able) {
-//        [self REC_Available];
-//    }
+    BOOL photo_able = [TopReplayManager detectionPhotoState:^{
+        [self REC_Available];
+    }];
+    if (photo_able) {
+        [self REC_Available];
+    }
     
-    [self REC_PermissionsAlert];
+//    [self REC_PermissionsAlert];
 }
 
 #pragma mark 录屏是否可用
 - (void)REC_Available {
     dispatch_async(dispatch_get_main_queue(), ^{
-        RPScreenRecorder* recorder = RPScreenRecorder.sharedRecorder;
-        if ([recorder isAvailable] && [TopReplayManager systemVersionIsAvailable]) {
+//        RPScreenRecorder* recorder = RPScreenRecorder.sharedRecorder;
+//        [recorder isAvailable] &&
+        if ( [TopReplayManager systemVersionIsAvailable]) {
             if ([TopReplayManager systemVersionIsRisk]) {
                 UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"您的系统版本小于10.2,如果录屏存在问题请使用版本较高的系统" preferredStyle:(UIAlertControllerStyleAlert)];
                 UIAlertAction *sureAct = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
@@ -226,8 +227,6 @@
                     }
                 }
             });
-            
-            
         }];
     });
 }

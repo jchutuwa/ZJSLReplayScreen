@@ -34,30 +34,26 @@
 #pragma mark 相册权限,在一开始就需要进行检测,如果在保存相册这一步才进行权限检测有几率出现保存失败
 + (BOOL)detectionPhotoState:(void(^)(void))authorizedResultBlock
 {
-    BOOL isAvalible = NO;
+    BOOL __block isAvalible = NO;
     PHAuthorizationStatus authStatus = [PHPhotoLibrary authorizationStatus];
-    if (authStatus == PHAuthorizationStatusNotDetermined)
-    {
+    if (authStatus == PHAuthorizationStatusNotDetermined) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
             
-            if (status == PHAuthorizationStatusAuthorized)
-            {
-                if (authorizedResultBlock)
-                {
+            if (status == PHAuthorizationStatusAuthorized){
+                if (authorizedResultBlock){
                     authorizedResultBlock();
+                    isAvalible = YES;
                 }
             }}];
-    } else if (authStatus == PHAuthorizationStatusAuthorized)
-    {
+    } else if (authStatus == PHAuthorizationStatusAuthorized){
         isAvalible = YES;
-        if (authorizedResultBlock)
-        {
+        if (authorizedResultBlock) {
             authorizedResultBlock();
         }
-    } else
-    {
+    } else{
         NSLog(@"没有相册权限");
     }
+    
     return isAvalible;
 }
 
