@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-
+//开始录屏
+- (void)startRecrod;
+//定制录屏
+- (void)stopRecord;
 @end
 

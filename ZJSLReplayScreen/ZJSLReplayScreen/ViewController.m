@@ -43,14 +43,14 @@
     //
     UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [btn setBackgroundColor:[UIColor greenColor]];
-    [btn addTarget:self action:@selector(photo_Available) forControlEvents:(UIControlEventTouchUpInside)];
+    [btn addTarget:self action:@selector(startRecrod) forControlEvents:(UIControlEventTouchUpInside)];
     [btn setTitle:@"开始" forState:UIControlStateNormal];
     btn.frame = CGRectMake(20, 100, 100, 100);
     [self.view addSubview:btn];
     
     UIButton *btn_stop = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [btn_stop setBackgroundColor:[UIColor redColor]];
-    [btn_stop addTarget:self action:@selector(handleStopBtn) forControlEvents:(UIControlEventTouchUpInside)];
+    [btn_stop addTarget:self action:@selector(stopRecord) forControlEvents:(UIControlEventTouchUpInside)];
      [btn_stop setTitle:@"结束" forState:UIControlStateNormal];
     btn_stop.frame = CGRectMake(140, 100, 100, 100);
     [self.view addSubview:btn_stop];
@@ -74,23 +74,25 @@
     [pan setTranslation:CGPointMake(0, 0) inView:self.view];
 }
 
-#pragma mark 点击了停止
-- (void)handleStopBtn {
+#pragma mark - 停止录制
+- (void)stopRecord{
     [self stopREC_WithSave:YES alert:YES tryAgain:NO];
+}
+
+#pragma mark - 开始录制
+- (void)startRecrod{
+    [self photo_Available];
 }
 
 #pragma mark 相册权限
 - (void)photo_Available {
     
-#warning 此处系统f判断有误...
     BOOL photo_able = [TopReplayManager detectionPhotoState:^{
         [self REC_Available];
     }];
     if (photo_able) {
         [self REC_Available];
     }
-    
-//    [self REC_PermissionsAlert];
 }
 
 #pragma mark 录屏是否可用
